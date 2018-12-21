@@ -1,0 +1,64 @@
+<h3>문자열의 길이는 length 속성으로 찾을 수 있다.</h3>
+<p id='demo1'></p>
+<script>
+		var txt = "ABCDEFGHIJK";
+		var sln = txt.length;
+        document.getElementById('demo1').innerHTML = sln;
+</script>
+
+<hr>
+<h3>Strings can be objects</h3>
+<p id='demo2'></p>
+<script>
+var x = "John"; // str
+var y = new String("John"); // object
+document.getElementById('demo2').innerHTML = typeof x + "<br>" + typeof y;
+</script>
+
+<hr> 
+<h3>indexOf를 통해 특정 문자를 찾을 수 있다.</h3>
+<p id='demo3'></p>
+<script>
+var txt2 = "abcdefg";
+var pos = txt2.indexOf("c");
+document.getElementById('demo3').innerHTML = pos;
+</script>
+
+<hr>
+<h3>slice로 문자열을 자를수 있다.</h3>
+<p id='demo4'></p>
+<script>
+var txt3 = "I can eat bananas all day";
+var x2 = txt3.slice(10, 17);
+document.getElementById('demo4').innerHTML = x2;
+</script>
+
+<hr>
+<h3>replace으로 문자열을 교체할 수 있다.</h3>
+<p id='demo5'></p>
+<script>
+var txt4 = "Hello World";
+txt5 = txt4.replace("Hello", "Welcome");
+document.getElementById('demo5').innerHTML = txt5;
+</script>
+
+<hr>
+<h3>toUpperCase으로 문자열을 대문자로 변경한다.</h3>
+<h3>toLowerCase으로 문자열을 소문자로 변경한다.</h3>
+<p id='demo6'></p>
+<p id='demo7'></p>
+<script>
+var txt6 = "Hello World";
+document.getElementById('demo6').innerHTML = txt6.toUpperCase();
+document.getElementById('demo7').innerHTML = txt6.toLowerCase();
+</script>
+
+<hr>
+<h3> concat()은 여러 문자열을 병합한다. </h3>
+<p id='demo8'></p>
+<script>
+var str1 = "Hello ";
+var str2 = "World!";
+var result = str1.concat(str2);
+document.getElementById('demo8').innerHTML = result;
+</script>
