@@ -1,0 +1,61 @@
+<html>
+<body>
+<p id='demo'></p>
+<script>
+function myFunc(p1, p2) {
+    return p1 * p2;
+}
+document.getElementById('demo').innerHTML = myFunc(3, 4);
+</script>
+
+<hr>
+<p id='demo2'></p>
+<script>
+var x = myFunc2(5, 3);
+document.getElementById('demo2').innerHTML = x;
+function myFunc2(a, b) {
+    return a * b;
+}
+</script>
+
+<hr>
+<p id='demo3'></p>
+<script>
+function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById('demo3').innerHTML = toCelsius(77);
+</script>
+
+<hr>
+<h3> () 를 사용하지 않으면 함수 결과 대신 함수 정의가 반환된다.</h3>
+<p id='demo4'></p>
+<script>
+document.getElementById('demo4').innerHTML = toCelsius;
+</script>
+
+<hr>
+<p id='demo5'></p>
+<script>
+var x = toCelsius(77);
+// var text = "The temperature is " + x + " Delsius";
+var text = "The temperature is " + toCelsius(77) + " Delsius";
+document.getElementById('demo5').innerHTML = text;
+</script>
+
+<hr>
+<h3> 함수안에서 정의된 local variable은 함수 안에서만 엑세스가 가능하다.</h3>
+<p id='demo6'></p>
+<p id='demo7'></p>
+<script>
+myFunc3();
+
+function myFunc3() {
+    var carName = "Volvo";
+    document.getElementById('demo6').innerHTML = typeof carName + " " + carName;
+}
+
+document.getElementById('demo7').innerHTML = typeof carName;
+</script>
+</body>
+</html>
