@@ -1,9 +1,9 @@
 <h3>length</h3>
 <p id='demo'></p>
 <script>
-		var txt = 'ABCDEFG';
-		var sln = txt.length;
-		document.getElementById('demo').innerHTML = sln;
+    var txt = 'ABCDEFG';
+    var sln = txt.length;
+    document.getElementById('demo').innerHTML = sln;
 </script>
 
 <hr>
@@ -13,50 +13,151 @@
 <p id='demo3'></p>
 <p id='demo4'></p>
 <script>
-		var str = "Please locate where 'locate' occurs!";
-		var pos = str.indexOf("locate");
-		var pos2 = str.lastIndexOf("locate");
-		var pos3 = str.lastIndexOf("John");
-		var pos4 = str.indexOf("locate", 15); // index 15부터 시작하지만, 결과 값의 index는 변하지 않기 때문에 결과는 같다.
-		document.getElementById('demo1').innerHTML = pos;
-		document.getElementById('demo2').innerHTML = pos2;
-		document.getElementById('demo3').innerHTML = pos3;
-		document.getElementById('demo4').innerHTML = pos4;
+    var str = "Please locate where 'locate' occurs!";
+    var pos = str.indexOf("locate");
+    var pos2 = str.lastIndexOf("locate");
+    var pos3 = str.lastIndexOf("John");
+    var pos4 = str.indexOf("locate", 15); // index 15부터 시작하지만, 결과 값의 index는 변하지 않기 때문에 결과는 같다.
+    document.getElementById('demo1').innerHTML = pos;
+    document.getElementById('demo2').innerHTML = pos2;
+    document.getElementById('demo3').innerHTML = pos3;
+    document.getElementById('demo4').innerHTML = pos4;
 </script>
 
 <hr>
 <h3>search</h3>
+<p id='demo5'></p>
+<script>
+    var pos5 = str.search("locate");
+    document.getElementById('demo5').innerHTML = pos5;
+</script>
 
 <hr>
 <h3>slice</h3>
+<p id='demo6'></p>
+<p id='demo7'></p>
+<p id='demo8'></p>
+<script>
+    var str2 = "Apple, Banana, Kiwi";
+    // var res = str3.slice(7, 13);
+    var res = str2.slice(-12, -6);
+    var res2 = str2.slice(7);
+    var res3 = str2.slice(-12);
+    document.getElementById('demo6').innerHTML = res;
+    document.getElementById('demo7').innerHTML = res2;
+    document.getElementById('demo8').innerHTML = res3;
+</script>
 
 <hr>
-<h3>substring</h3>
+<h3>substring: 음수 인덱스를 허용하지 않음.</h3>
+<p id='demo9'></p>
+<script>
+    var res4 = str2.substring(7, 13);
+    document.getElementById('demo9').innerHTML = res4;
+</script>
 
 <hr>
-<h3>substr</h3>
+<h3>substr: 두번째 매개변수는 문자의 길이를 뜻함</h3>
+<p id='demo10'></p>
+<p id='demo11'></p>
+<p id='demo12'></p>
+<script>
+    var res5 = str2.substr(7, 6);
+    var res6 = str2.substr(7);
+    var res7 = str2.substr(-4);
+    document.getElementById('demo10').innerHTML = res5;
+    document.getElementById('demo11').innerHTML = res6;
+    document.getElementById('demo12').innerHTML = res7;
+</script>
 
 <hr>
 <h3>replace</h3>
+<p id='demo13'></p>
+<b>동일한 값이 있다면 기본적으로 첫번째 일치값만 바꾼다.</b>
+<p id='demo14'></p>
+<b>대소문자를 구별하지 않으려면 '/i' 플래그를 사용하면 된다.</b>
+<p id='demo15'></p>
+<b>일치하는 모든 값을 변경하려면 '\g' 플래그를 사용하면 된다.</b>
+<p id='demo16'></p>
+<script>
+    str3 = "Please wisit Microsoft!";
+    str4 = "Please wisit Microsoft of Microsoft!";
+    var n = str3.replace("Microsoft", "W3Schools");
+    var n2 = str4.replace("Microsoft", "W3Schools");
+    var n3 = str3.replace(/MICROSOFT/i, "W3Schools");
+    var n4 = str4.replace(/MICROSOFT/g, "W3Schools");
+    document.getElementById('demo13').innerHTML = n;
+    document.getElementById('demo14').innerHTML = n2;
+    document.getElementById('demo15').innerHTML = n3;
+    document.getElementById('demo16').innerHTML = n4;
+</script>
 
 <hr>
 <h3>toUpperCase, toLowerCase</h3>
+<p id='demo17'></p>
+<p id='demo18'></p>
+<script>
+    var text = "Hello World!";
+    var t1 = text.toUpperCase();
+    var t2 = text.toLowerCase();
+    document.getElementById('demo17').innerHTML = t1;
+    document.getElementById('demo18').innerHTML = t2;
+</script>
 
 <hr>
-<h3>concat</h3>
+<h3>concat: 두 개 이상의 문자열을 join!</h3>
+<p id='demo19'></p>
+<p id='demo20'></p>
+<script>
+    var text1 = "Hello";
+    var text2 = "World";
+    var t3 = text1.concat(" ", text2);
+    var t4 = "Hello".concat(" ", "World!");
+    document.getElementById('demo19').innerHTML = t3;
+    document.getElementById('demo20').innerHTML = t4;
+</script>
 
 <hr>
-<h3>trim</h3>
+<h3>trim: 양쪽 공백을 제거함</h3>
+<p>IE8 이하에서 동작하려면 정규식을 사용해야 함.</p>
+<script>
+    var str5 = "             Hello World !         ";
+    alert(str5.trim());
+</script>
 
 <hr>
 <h2>Extracting string characters</h2>
-<h3>charAt</h3>
-
-<hr>
-<h3>charCodeAt</h3>
+<h3>charAt, charCodeAt</h3>
+<b>charAt : 지정된 인덱스 위치의 문자를 반환한다.</b>
+<b>charCodeAt : 지정된 인덱스 위치의 문자의 유니코드를 반환한다.</b>
+<p id='demo21'></p>
+<p id='demo22'></p>
+<script>
+    var c1 = text.charAt(0);
+    var c2 = text.charCodeAt(0);
+    document.getElementById('demo21').innerHTML = c1;
+    document.getElementById('demo22').innerHTML = c2;
+</script>
 
 <hr>
 <h3>Property Access</h3>
+<p id='demo23'></p>
+<script>
+    var c3 = text[0];
+    document.getElementById('demo23').innerHTML = c3;
+</script>
 
 <hr>
 <h3>converting a string to an array</h3>
+<b>split 매서드를 사용하여 배열로 변환할 수 있다.</b>
+<p id='demo24'></p>
+<p id='demo25'></p>
+<p id='demo26'></p>
+<p id='demo27'></p>
+<script>
+    var txt = "a,b,c,d,e";
+    document.getElementById('demo24').innerHTML = txt.split(",")[0];
+    document.getElementById('demo25').innerHTML = txt.split(" ")[0];
+    document.getElementById('demo26').innerHTML = txt.split("|")[0];
+    document.getElementById('demo27').innerHTML = txt.split("")[0];
+</script>    
