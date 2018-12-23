@@ -1,0 +1,118 @@
+<h3>toString()</h3>
+<b>숫자를 문자열로 반환한다.</b>
+<p id='demo'></p>
+<script>
+var x = 123;
+document.getElementById('demo').innerHTML = x.toString() + "<br>"
+                                            + (123).toString() + "<br>"
+                                            + (100 + 23).toString();
+</script>
+
+<h3>toExponential()</h3>
+<b>지수 표기법을 사용하여 반올림하여 문자열을 반환한다.</b>
+<p id='demo2'></p>
+<script>
+var x = 9.656;
+document.getElementById('demo2').innerHTML = x.toExponential(2) + "<br>"
+                                           + x.toExponential(4) + "<br>"
+                                           + x.toExponential(6);
+</script>
+
+<h3>toFixed()</h3>
+<b>지정된 숫자만큼 소수점 이하 자릿수를 문자열로 반환한다.</b>
+<p id='demo3'></p>
+<script>
+var x = 9.656;
+document.getElementById('demo3').innerHTML = x.toFixed(0) + "<br>"
+                                           + x.toFixed(2) + "<br>"
+                                           + x.toFixed(4) + "<br>"
+                                           + x.toFixed(6);
+</script>
+
+<h3>toPrecision()</h3>
+<b>지정된 길이만큼 문자열을 반환한다.</b>
+<p id='demo4'></p>
+<script>
+document.getElementById('demo4').innerHTML = x.toPrecision() + "<br>"
+                                           + x.toPrecision(2) + "<br>"
+                                           + x.toPrecision(4) + "<br>"
+                                           + x.toPrecision(6);
+</script>
+
+<h3>valueOf()<h3>
+<p id='demo5'></p>
+<script>
+var x = 123;
+document.getElementById('demo5').innerHTML = x.valueOf() + "<br>"
+                                           + (123).valueOf() + "<br>"
+                                           + (100 + 23).valueOf();
+</script>
+
+<h2>Global JS Method</h2>
+<b>Number(), parseInt(), parseFloat() 는 global JS 메소드이다.</b>
+<br>Global 메서드는 모든 JS 데이터 형식에서 사용할 수 있다.
+
+<h3>Number()</h3>
+<b>인수를 숫자로 반환한다.</b>
+<p id='demo6'></p>
+<b>날짜를 숫자로도 변환한다.</b>
+<p id='demo7'></p>
+<script>
+document.getElementById('demo6').innerHTML = Number(true) + " " + Number(false) + "<br>"
+                                           + Number("10") + " " + Number("    10") + "<br>"
+                                           + Number("10.33") + " " + Number("10,33") + " " + Number("10 33") + "<br>"
+                                           + Number("John");
+document.getElementById('demo7').innerHTML = Number(new Date("2018-12-23"));
+</script>
+
+<h3>parseInt()</h3>
+<b>인수를 실수로 반환한다.</b>
+<br>문자열을 분석하여 정수를 반환하는데, 공백은 허용하며, 첫번째 숫자만 반환한다.
+<p id='demo8'></p>
+<script>
+document.getElementById('demo8').innerHTML = parseInt("10") + "<br>"
+                                           + parseInt("10.33") + "<br>"
+                                           + parseInt("10 23 40") + "<br>"
+                                           + parseInt("10 year") + "<br>"
+                                           + parseInt("year 10") + "<br>"
+                                           + parseInt("10.123879182734");
+</script>
+
+<h3>parseFloat()</h3>
+<b>인수를 정수로 반환한다.</b>
+<p id='demo9'></p>
+<script>
+document.getElementById('demo9').innerHTML = parseFloat("10") + "<br>"
+                                           + parseFloat("10.33") + "<br>"
+                                           + parseFloat("10 20 30") + "<br>"
+                                           + parseFloat("10 year") + "<br>"
+                                           + parseFloat("years 10") + "<br>"
+                                           + parseFloat("10.2372938478347");
+</script>
+
+<h2>Number Properties</h2>
+<b>MAX_VALUE</b>
+<p id='demo10'></p>
+<br>
+<b>MIN_VALUW</b>
+<p id='demo11'></p>
+<b>POSITIVE_INFINITY</b>
+<p id='demo12'></p>
+<b>NEGATIVE_INFINITY</b>
+<p id='demo13'></p>
+<b>NaN(Not a Number)</b>
+<p id='demo14'></p>
+<script>
+document.getElementById('demo10').innerHTML = Number.MAX_VALUE;
+document.getElementById('demo11').innerHTML = Number.MIN_VALUE;
+document.getElementById('demo12').innerHTML = Number.POSITIVE_INFINITY;
+document.getElementById('demo13').innerHTML = Number.NEGATIVE_INFINITY;
+document.getElementById('demo14').innerHTML = Number.NaN;
+</script>
+
+<h3>Number 프로퍼티는 변수에는 사용할 수 없다.</h3>
+<p id='demo15'></p>
+<script>
+var x = 6;
+document.getElementById('demo15').innerHTML = x.MAX_VALUE;
+</script>
