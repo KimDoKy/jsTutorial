@@ -1,0 +1,92 @@
+<h2>Arrays</h2>
+
+<h3>syntax</h3>
+<b>var array_name = [item1, item2, ...]</b>
+<br>var array_name = new Array('item1', 'item2', ...) 으로 array를 선언해도 되지만, 첫번째꺼 쓰면 됨.
+<h4>access full array</h4>
+<p id='demo'></p>
+<h4>Access</h4>
+<p id='demo1'></p>
+<h4>change</h4>
+<p id='demo2'></p>
+<h4>object</h4>
+<p id='demo3'></p>
+<h4>array properties and method</h4>
+<p id='demo4'></p>
+<p id='demo5'></p>
+<h4>accessing the last array element</h4>
+<p id='demo6'></p>
+<h4>Looping array Element</h4>
+<p id='demo7'></p>
+<p id='demo8'></p>
+<script>
+// defined array, full access
+var cars = ["Saab", "Volov", "BMW"];
+document.getElementById('demo').innerHTML = cars;
+// access array
+document.getElementById('demo1').innerHTML = cars[0];
+// change
+cars[0] = "Opel";
+document.getElementById('demo2').innerHTML = cars[0];
+// object
+var person = ["John", "Doe", 46] // array
+var person = {firstName:"John", lastName:"Doe", age:46}; // object
+document.getElementById('demo3').innerHTML = person['firstName'];
+// array properties, method
+document.getElementById('demo4').innerHTML = cars.length;
+document.getElementById('demo5').innerHTML = cars.sort();
+// access last element
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById('demo6').innerHTML = fruits[fruits.length - 1];
+// looping 1
+txt = "<ul>";
+for (i = 0; i < fruits.length; i++) {
+    txt += "<li>" + fruits[i] + "</li>";
+}
+txt += "</ul>";
+document.getElementById('demo7').innerHTML = txt;
+// looping 2 / forEach()
+txt = "<ul>";
+fruits.forEach(myFunc);
+txt += "</ul>";
+function myFunc(value) {
+    txt += "<li>" + value + "</li>";
+}
+document.getElementById('demo8').innerHTML = txt;
+</script>
+
+<h3>adding array element</h3>
+<p id='demo9'></p>
+<p id='demo10'></p>
+<script>
+fruits.push('Lemon');
+document.getElementById('demo9').innerHTML = fruits;
+// index를 지정하여 추가할 수 있지만, 구멍이 생길 수 있다.
+fruits[6] = 'Melon';
+document.getElementById('demo10').innerHTML = fruits;
+// JS에서 인덱스는 키워드는 지원하지않고, 숫자만 사용 가능하다.
+// 숫자 사용 예
+var person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46; // person[0] 는 "John"을 반환
+// 인덱스로 키워드를 지정하여 정의하면, 숫자로 인덱스 접근할 수 없다.
+var person2 = [];
+person2['firstName'] = 'John';
+person2['lastName'] = 'Doe';
+person2['age'] = 46; // person2[0] 는 undifined.
+</script>
+
+<h3>How to recognize an arrat</h3>
+<ul>
+  <li>Array.isArray(array_name); // return true or false
+    <br>ECMAScript 5이하의 오래된 브라우저에서는 지원하지 않음</li>
+  <li>나만의 isArray() 함수를 만들기
+    <br>function isArray(x) {
+    <br> return x.constructor.toString().indexOf("Array") > -1;
+    <br> }
+    <br> object 프로토타입에 'Array'라는 단어가 있으면 true를 반환</li>
+  <li>instanceof 는 주어진 생성자가 객체를 생성하면 true를 반환
+    <br>array_name instanceof Array;</li>
+</ul>
+
