@@ -1,0 +1,20 @@
+<script>
+// sorting
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.sort();  // sorting
+fruits.reverse(); // reversing
+
+// numeric sort
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+// points.sort(function(a, b){return 0.5 - Math.random()}); // Random Order
+
+// highest number
+function myArrayMax(arr) {
+    return Math.max.apply(null, arr);
+}
+// lowest number
+function myArrayMin(arr) {
+    return Math.min.apply(null, arr);
+}
+</script>
