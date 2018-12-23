@@ -1,0 +1,153 @@
+<h3>Numbers</h3>
+<p id='demo1'></p>
+<p id='demo2'></p>
+<p id='demo3'></p>
+<p id='demo4'></p>
+<script>
+var x = 3.14;
+var y = 3;
+var xe = 123e5;
+var ye = 123e-5;
+document.getElementById('demo1').innerHTML = x;
+document.getElementById('demo2').innerHTML = y;
+document.getElementById('demo3').innerHTML = xe;
+document.getElementById('demo4').innerHTML = ye;
+</script>
+
+<hr>
+<h3>64-bit Floating point</h3>
+<p>JS는 int, long, float 등을 구분하지 않는다.</p>
+
+<hr>
+<h3>Precision</h3>
+<p>15자리까지는 정확히 표기한다.</p>
+<p id='demo5'></p>
+<p id='demo6'></p>
+<p>부동소수점은 항상 100% 옮지 않다.</p>
+<p id='demo7'></p>
+<p>부동소수점을 해결하려면 곱셈이나 나눗셈을 이용해야 한다.</p>
+<p id='demo8'></p>
+<script>
+var x = 999999999999999;
+var y = 9999999999999999;
+var z = 0.2 + 0.1;
+var x1 = (0.2 * 10 + 0.1 * 10) / 10;
+document.getElementById('demo5').innerHTML = x;
+document.getElementById('demo6').innerHTML = y;
+document.getElementById('demo7').innerHTML = z;
+document.getElementById('demo8').innerHTML = x1;
+</script>
+
+
+<hr>
+<h3>Addming numbers and strings</h3>
+<p id='demo9'></p>
+<script>
+var x = 10;
+var y = 20;
+var z = "The result is : " + x + y;
+document.getElementById('demo9').innerHTML = z;
+</script>
+
+
+<hr>
+<h3>Numeric strings</h3>
+<p>JS는 모든 숫자 연산에서 문자열도 숫자로 변환한다.</p>
+<p id='demo10'></p>
+<p id='demo11'></p>
+<p id='demo12'></p>
+<p id='demo13'></p>
+<script>
+var x = "100";
+var y = "10";
+var t1 = typeof(x);
+var t2 = typeof(y);
+var z = x / y;
+var z1 = x - y;
+document.getElementById('demo10').innerHTML = t1;
+document.getElementById('demo11').innerHTML = t2;
+document.getElementById('demo12').innerHTML = z;
+document.getElementById('demo13').innerHTML= z1;
+</script>
+
+<hr>
+<h3>NaN : 유효한 숫자가 아님</h3>
+<p id='demo14'></p>
+<p id='demo15'></p>
+<p id='demo16'></p>
+<p id='demo17'></p>
+<p id='demo18'></p>
+<p id='demo19'></p>
+<script>
+var x1 = 100 / "Apple";
+var x2 = 100 / "10"; // 문자열이 숫자인 경우 문자열을 숫자로 변환하여 실행
+var x3 = isNaN(x1);
+var x4 = NaN;
+var x5 = 5;
+var x6 = x4 + x5;
+var x7 = "5";
+var x8 = x4 + x7;
+var x9 = typeof(NaN);
+document.getElementById('demo14').innerHTML = x1;
+document.getElementById('demo15').innerHTML = x2;
+document.getElementById('demo16').innerHTML = x3;
+document.getElementById('demo17').innerHTML = x6;
+document.getElementById('demo18').innerHTML = x8;
+document.getElementById('demo19').innerHTML = x9;
+</script>
+
+<hr>
+<h3>Infinity</h3>
+<b>JS가 표현 가능한 가장 큰 숫자를 계산하면 Infinity를 반환한다.</b>
+<p id='demo20'></p>
+<b>0으로 나누어도 Infinity를 반환한다.</b>
+<p id='demo21'></p>
+<p id='demo22'></p>
+<b>Infinity Type</b>
+<p id='demo23'></p>
+<script>
+var myNum = 2;
+var txt = "";
+while (myNum != Infinity) {
+    myNum = myNum * myNum;
+    txt = txt + myNum + "<br>";
+}
+var x1 = 2 / 0;
+var x2 = -2 / 0;
+document.getElementById('demo20').innerHTML = txt;
+document.getElementById('demo21').innerHTML = x1;
+document.getElementById('demo22').innerHTML = x2;
+document.getElementById('demo23').innerHTML = typeof Infinity;
+</script>
+
+<hr>
+<h3>Hexadecimal</h3>
+<b>'0x'가 앞에 오면 16진수로 해석한다.</b>
+<p id='demo24'></p>
+<b>toString()을 이용하여 다른 진법으로 표현할 수 있다.</b>
+<p id='demo25'></p>
+<script>
+document.getElementById('demo24').innerHTML = 0xff;
+var myN = 32;
+document.getElementById('demo25').innerHTML = myN.toString(10);
+// document.getElementById('demo25').innerHTML = myN.toString(32);
+// document.getElementById('demo25').innerHTML = myN.toString(16);
+// document.getElementById('demo25').innerHTML = myN.toString(8);
+// document.getElementById('demo25').innerHTML = myN.toString(2);
+// document.getElementById('demo25').innerHTML = myN.toString(3);
+</script>
+
+<hr>
+<h3>Numbers can be objects</h3>
+<b>new 키워드를 사용하여 obejct로 정의할 수 있다.</b>
+<p id='demo26'></p>
+<p id='demo27'></p>
+<script>
+var x = 123; // number
+var y = new Number(123); // object
+// document.getElementById('demo26').innerHTML = (x == y); // true
+document.getElementById('demo26').innerHTML = (x === y); // false
+var x1 = new Number(500);
+var y1 = new Number(500);
+document.getElementById('demo27').innerHTML = (x1 == y1);
+</script>
