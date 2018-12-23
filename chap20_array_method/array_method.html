@@ -1,0 +1,78 @@
+<h2>Array Method</h2>
+
+<h3>Converting Arrays to String</h3>
+<h4>toString()</h4>
+<p id='demo1'></p>
+<h4>join()</h4>
+<p id='demo2'></p>
+<h4>pop()</h4>
+<p id='demo3'></p>
+<h4>push()</h4>
+<p id='demo4'></p>
+<script>
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+document.getElementById('demo1').innerHTML = fruits.toString();
+document.getElementById('demo2').innerHTML = fruits.join(" * "); 
+document.getElementById('demo3').innerHTML = fruits.pop();
+document.getElementById('demo4').innerHTML = fruits.push('bae');
+</script>
+
+<h3>Shifting element</h3>
+<h4>shift()</h4>
+<p id='demo5'></p>
+<h4>unshift()</h4>
+<p id='demo6'></p>
+<script>
+fruits.shift(); // remove the first element. return value is first element.
+document.getElementById('demo5').innerHTML = fruits;
+fruits.unshift('Lemon');
+document.getElementById('demo6').innerHTML = fruits;
+</script>
+
+<h4>Changing Element</h4>
+<p id='demo7'></p>
+<h4>Deleting Element</h4>
+<p id='demo8'></p>
+<script>
+fruits[0] = "Kiwi";
+document.getElementById('demo7').innerHTML = fruits;
+delete fruits[0]; // delete는 배열에 구멍이 생길 수 있기에, pop, shift를 사용해야 한다.
+document.getElementById('demo8').innerHTML = fruits;
+</script>
+
+<h3>Splicing an array</h3>
+<p id='demo9'></p>
+<p id='demo10'></p>
+<p id='demo11'></p>
+<h4>Using splice() to remove element</h4>
+<script>
+fruits[0] = 'Kiwi';
+document.getElementById('demo9').innerHTML = 'before: ' + fruits;
+fruits.splice(2, 1, 'Lemon', 'Kiwi'); // 1st param : insert position, 2nd param : remove count(1st param에서부처 삭제)
+document.getElementById('demo10').innerHTML = 'after: ' + fruits;
+fruits.splice(0, 1);
+document.getElementById('demo11').innerHTML = 'remove : ' + fruits;
+</script>
+
+<h3>Merging</h3>
+<h4>concat()</h4>
+<p id='demo12'></p>
+<p id='demo13'></p>
+<script>
+var myGirls = ["Sujin", "SoYean"];
+var myBoys = ["Vin", "JaeSuck"];
+document.getElementById('demo12').innerHTML= myGirls.concat(myBoys);
+document.getElementById('demo13').innerHTML = myGirls.concat(myBoys, "kyungJun", "MinWoo");
+</script>
+
+<h3>Slicing an Array</h3>
+<h4>slice()</h4>
+<p id='demo14'></p>
+<p id='demo15'></p>
+<p id='demo16'></p>
+<script>
+document.getElementById('demo14').innerHTML = fruits;
+document.getElementById('demo15').innerHTML = fruits.slice(2);
+document.getElementById('demo16').innerHTML = fruits.slice(1,3);
+</script>
+
