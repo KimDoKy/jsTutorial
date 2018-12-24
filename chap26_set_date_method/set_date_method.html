@@ -1,0 +1,24 @@
+<p id='demo'></p>
+<script>
+// setDate() : 날짜를 숫자로 설정(1-31)
+// setFullYear()
+// setHours()
+// setMilliseconds()
+// setMinutes()
+// setMonth()
+// setSeconds()
+// setTime()
+
+// Compare Dates
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2017, 0, 14);
+
+if (someday > today) {
+    text = "Today is before Jan 14, 2017.";
+    } else {
+    text = "Today is after Jan 14, 2017.";
+    }
+document.getElementById('demo').innerHTML = text;
+</script>
