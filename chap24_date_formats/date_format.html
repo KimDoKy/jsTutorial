@@ -1,0 +1,22 @@
+<p id='demo'></p>
+<script>
+// ISO Date : "2018-12-24"
+// Short Date : "12/24/2018"
+// Long Date : "Dec 24 2018" or "24 Dec 2018"
+
+// ISO Dates(Year and Month)
+// (YYYY-MM-DDTHH:MM:SSZ)
+// 날짜와 시간은 T로 구분
+// UTC 기분을 수정하려면 Z를 제거하고 HH:MM을 추가
+var d = new Date("2018-12-24T22:00:00-06:30");
+
+// Short Dates
+var d = new Date("12/24/2018");
+
+// Long Dates
+var d = new Date("Dec 24 2018");
+
+// Date Input - parsing dates
+var msec = Date.parse("Dec 24, 2018");
+var d = new Date(msec);
+</script>
