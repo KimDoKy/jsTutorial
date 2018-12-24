@@ -1,0 +1,24 @@
+<p id='demo'></p>
+<script>
+// new Date()
+var d = new Date();
+// new Date(year, month, ..)
+var d = new Date(2018, 11, 24);
+// new Date(dateString)
+var d = new Date("October 13, 2018 11:13:00");
+// new Date(milliseconds)
+var d = new Date(100000000000);
+
+// Displaying Dates
+// toString()
+// HTML으로 Date object를 표시할때 자동으로 문자열로 반환
+var d = new Date();
+document.getElementById('demo').innerHTML = d;
+// document.getElementById('demo').innerHTML = d.toString(); // 같은 결과
+// toUTCString()
+// 날짜를 UTC 문자열로 변환
+document.getElementById('demo').innerHTML = d.toUTCString();
+// toDateString()
+// 날짜를 읽기 쉬운 형식으로 변환
+document.getElementById('demo').innerHTML = d.toDateString();
+</script>
