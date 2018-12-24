@@ -1,0 +1,49 @@
+<body>
+<p id='demo'></p>
+<script>
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+    default:
+        day = "Looking forward to the Weekend";
+}
+document.getElementById('demo').innerHTML = day;
+</script>
+<p id='demo2'></p>
+<script>
+// 다른 스위치 케이스에서 동일한 코드를 사용하기
+switch (new Date().getDay()) {
+    case 4:
+    case 5:
+        text = "Soon it is Weekend";
+        break;
+    case 0:
+    case 6:
+        text = "It is Weekend";
+        break;
+    default:
+        text = "Looking forward to the Weekend";
+}
+document.getElementById('demo2').innerHTML = text;
+/// switch에서는 비교는 '===' 를 사용한다. 유형까지 같아야 true
+</script>
+</body>
