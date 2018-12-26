@@ -1,0 +1,33 @@
+<body>
+<script>
+// break statement
+var i = 0;
+var text = "";
+for (i = 0; i < 10; i++) {
+    if (i === 3) {break;}
+	text += "The number is " + i + "<br>";
+}
+// continue statement
+var i = 0;
+var text2 = "";
+for (i = 0; i < 10; i++) {
+    if (i === 3) {continue;}
+	text2 += "The number is " + i + "<br>";
+}
+// labels
+// syntax
+// label: {
+//     break labelname;
+//     continue labelname;
+// }
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text3 = "";
+
+list: {
+    text3 += cars[0] + "<br>";
+    text3 += cars[1] + "<br>";
+	break list;
+	text3 += cars[2] + "<br>";
+	text3 += cars[3] + "<br>";
+}
+</script>
