@@ -1,0 +1,33 @@
+<body>
+<script>
+// while loop
+var text = "";
+var i= 0;
+while (i < 10) {
+    text += "The number is " + i;
+	i++;
+}
+// do/while loop
+// 조건을 판단하기 전에 먼저 실행하고 조건을 판단한다.
+var text2 = "";
+var i = 0;
+do {
+    text2 += "The number is " + i;
+	i++;
+}
+while (i < 10);
+// comparing for and while
+var cars = ["BMW", "Volov", "Saab", "Ford"];
+var i = 0;
+var text3 = "";
+for (;cars[i];) {
+	text3 += cars[i] + "<br>";
+	i++;
+}
+var i = 0;
+var text4 = "";
+while (cars[i]) {
+    text4 += cars[i] + "<br>";
+	i++;
+}
+</script>
