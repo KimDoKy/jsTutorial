@@ -1,0 +1,30 @@
+<script>
+// 출처 : http://mainia.tistory.com/967
+// break labels
+document.write("<h3>Entering the break loop!</h3>");
+outerloop:
+for (var i = 0; i < 5; i++) {
+	document.write("Outerloop: " + i + "<br>");
+    innerloop:
+	for (var j = 0; j < 5; j++) {
+	    if (j > 3) break;
+		if (i == 2) break innerloop;
+		if (i == 4) break outerloop;
+		document.write("Innerloop: " + j + "<br>");
+	}
+}
+document.write("Exiting the continue loop!<br>");
+// continue labels
+document.write("<hr><h3>Entering the loop!</h3>");
+outerloop:
+for (var i = 0; i < 3; i++) {
+    document.write("Outerloop: " + i + "<br>");
+	for (var j = 0; j < 5; j++) {
+	    if (j == 3) {
+		    continue outerloop;
+		}
+		document.write("Innerloop: " + j + "<br>");
+	}
+}
+document.write("Exiter the continue loop!<br>");
+</script>
