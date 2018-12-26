@@ -1,0 +1,19 @@
+<body>
+<p id='demo'></p>
+<p id='demo2'></p>
+<script>
+// for loop
+for (i = 0, text = ""; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+document.getElementById('demo').innerHTML = text;
+// for/in loop
+var person = {fname:"John", lname:"Doe", age:25};
+var text2 = "";
+var x;
+for (x in person) {
+    text2 += person[x];
+}
+document.getElementById('demo2').innerHTML = text2;
+</script>
+</body>
